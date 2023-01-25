@@ -19,6 +19,8 @@
 
 ```js
  - npx express-generator server --no-view
+ - cd sever folder
+ - npm i cors crypto-js dotenv express-validator jsonwebtoken mongoose nodemon
 ```
 
 <hr>
