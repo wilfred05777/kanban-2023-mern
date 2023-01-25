@@ -23,6 +23,15 @@
  - npm i cors crypto-js dotenv express-validator jsonwebtoken mongoose nodemon
 ```
 
+- server/src/v1/
+- models/modelsOptions.js
+  - models/user.js
+- controllers/user.js
+- handlers/
+  - tokenHandlers.js
+  - validation.js
+- routes/auth.js
+
 <hr>
 
 ### FRONTEND/CLIENT
