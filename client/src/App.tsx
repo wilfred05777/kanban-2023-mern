@@ -7,14 +7,14 @@ import CssBaseLine from '@mui/material/CssBaseline'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import AuthLayout from './layout/AuthLayout'
+import AuthLayout from './components/layout/AuthLayout'
 import Home from './pages/Home'
 import Board from './pages/Board'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 
 import './App.css'
-import AppLayout from './layout/AppLayout'
+import AppLayout from './components/layout/AppLayout'
 
 const App = () => {
   const theme = createTheme({

@@ -15,7 +15,7 @@ const Login = () => {
     setUsernameErrText('')
     setPasswordErrText('')
 
-    const data = new FormData(e.target)
+    const data: any = new FormData(e.target)
     const username = data.get('username').trim()
     const password = data.get('password').trim()
 
@@ -34,13 +34,13 @@ const Login = () => {
     setLoading(true)
 
     try {
-      const res = await authApi.login({ username, password })
+      const res: any = await authApi.login({ username, password })
       setLoading(false)
       localStorage.setItem('token', res.token)
       navigate('/')
-    } catch (err) {
+    } catch (err: any) {
       const errors = err.data.errors
-      errors.foreEach((e) => {
+      errors.foreEach((e: any) => {
         setUsernameErrText(e.msg)
       })
       setLoading(false)

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import Loading from '../components/common/Loading'
-import Sidebar from '../components/common/Sidebar'
+
+import Loading from '../common/Loading'
+import Sidebar from '../common/Sidebar'
 import { Box } from '@mui/material'
-import authUtils from '../utils/authUtils'
+import authUtils from '../../utils/authUtils'
 
 const AppLayout = () => {
   const navigate = useNavigate()
