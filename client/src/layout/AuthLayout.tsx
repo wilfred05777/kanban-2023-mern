@@ -32,6 +32,7 @@ const AuthLayout = () => {
           marginTOp: 8,
           display: 'flex',
           alignItems: 'center',
+          justify: 'center',
           flexDirection: 'column'
         }}
       >
