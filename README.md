@@ -1,4 +1,4 @@
-!["Full Stack Kanban App | React Node MongoDB Material-UI"](https://user-images.githubusercontent.com/67447840/177310317-3d9ad738-af83-4cc1-976a-c4a54c1033ff.png "Full Stack Kanban App | React Node MongoDB Material-UI")
+!["Full Stack Kanban App | React Node MongoDB Material-UI"](https://user-images.githubusercontent.com/67447840/177310317-3d9ad738-af83-4cc1-976a-c4a54c1033ff.png 'Full Stack Kanban App | React Node MongoDB Material-UI')
 
 # Video tutorial
 
@@ -13,7 +13,7 @@
 
 # Preview
 
-!["Full Stack Kanban App | React Node MongoDB Material-UI"](https://user-images.githubusercontent.com/67447840/177310521-764f8ff7-5e3d-4644-ac0a-273cf83e48aa.gif "Full Stack Kanban App | React Node MongoDB Material-UI")
+!["Full Stack Kanban App | React Node MongoDB Material-UI"](https://user-images.githubusercontent.com/67447840/177310521-764f8ff7-5e3d-4644-ac0a-273cf83e48aa.gif 'Full Stack Kanban App | React Node MongoDB Material-UI')
 
 ### BACKEND
 
@@ -42,3 +42,6 @@
 - npm install react-router-dom @reduxjs/toolkit react-beautiful-dnd query-string axios moment emoji-mart@3.0.1 @mui/material @mui/lab @mui/icons-material @fontsource/roboto @emotion/react @ckeditor/ckeditor5-react @ckeditor/ckeditor5-build-classic --legacy-peer-deps
 
 ```
+
+- create client/src/api/axiosClient.tsx
+- create client/src/api/authApi.tsx
