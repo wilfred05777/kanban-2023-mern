@@ -25,6 +25,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseLine>
         <BrowserRouter>
+          {/* <Route path='login' element={<Login />} />
+          <Route path='signup' element={<Signup />} /> */}
           <Routes>
             <Route path='/' element={<AuthLayout />}>
               <Route path='login' element={<Login />} />
