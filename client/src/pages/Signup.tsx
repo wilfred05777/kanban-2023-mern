@@ -44,32 +44,32 @@ const Signup = () => {
 
     if (err) return
 
-    // setLoading(true)
+    setLoading(true)
 
-    // try {
-    //   const res: any = await authApi.signup({
-    //     username,
-    //     password,
-    //     confirmPassword
-    //   })
-    //   setLoading(false)
-    //   localStorage.setItem('token', res.token)
-    //   navigate('/')
-    // } catch (err: any) {
-    //   const errors = err.data.errors
-    //   errors.forEach((e: any) => {
-    //     if (e.param === 'username') {
-    //       setUsernameErrText(e.msg)
-    //     }
-    //     if (e.param === 'password') {
-    //       setPasswordErrText(e.msg)
-    //     }
-    //     if (e.param === 'confirmPassword') {
-    //       setConfirmPasswordErrText(e.msg)
-    //     }
-    //   })
-    //   setLoading(false)
-    // }
+    try {
+      const res: any = await authApi.signup({
+        username,
+        password,
+        confirmPassword
+      })
+      setLoading(false)
+      localStorage.setItem('token', res.token)
+      navigate('/')
+    } catch (err: any) {
+      const errors = err.data.errors
+      errors.forEach((e: any) => {
+        if (e.param === 'username') {
+          setUsernameErrText(e.msg)
+        }
+        if (e.param === 'password') {
+          setPasswordErrText(e.msg)
+        }
+        if (e.param === 'confirmPassword') {
+          setConfirmPasswordErrText(e.msg)
+        }
+      })
+      setLoading(false)
+    }
   }
 
   return (
