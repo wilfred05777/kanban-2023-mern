@@ -1,25 +1,32 @@
-const router = require("express").Router();
-const userController = require("../controllers/users");
-const { body } = require("express-validator");
-const validation = require("../handlers/validation");
-const tokenHandler = require("../handlers/tokenHandler");
-const User = require("../models/user");
+const router = require('express').Router()
+const userController = require('../controllers/users')
+const { body } = require('express-validator')
+const validation = require('../handlers/validation')
+const tokenHandler = require('../handlers/tokenHandler')
+const User = require('../models/user')
 
 router.post(
-  "/signup",
-  body("username")
+  '/signup',
+  body('username')
     .isLength({ min: 8 })
-    .withMessage("username must be at least 8 characters"),
-  body("password")
+    .withMessage('username must be at least 8 characters'),
+  body('password')
     .isLength({ min: 8 })
-    .withMessage("password must be at least 8 characters"),
-  body("username").custom((value) => {
+    .withMessage('password must be at least 8 characters'),
+  body('username').custom((value) => {
     return User.findOne({ username: value }).then((user) => {
       if (user) {
-        return Promise.reject("username already used");
+        return Promise.reject('username already used')
       }
-    });
+    })
   }),
   validation.validate,
   userController.register
-);
+)
+
+router.post('verify-token', tokenHandler.verifyToken, (req, res) => {
+  // @ts-ignore
+  res.status(200).json({ user: req.user })
+})
+
+module.exports = router
